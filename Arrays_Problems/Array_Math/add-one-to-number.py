@@ -51,5 +51,5 @@ test_function(test_case1)
 test_case1 = [[0, 3, 7, 6, 4, 0, 5, 5, 5], [3, 7, 6, 4, 0, 5, 5, 6]]
 test_function(test_case1)
 
-test_case1 = [[0, 0, 0, 0, 0, 0 3, 7, 6, 4, 0, 5, 5, 5], [3, 7, 6, 4, 0, 5, 5, 6]]
+test_case1 = [[0, 0, 0, 0, 0, 0, 3, 7, 6, 4, 0, 5, 5, 5], [3, 7, 6, 4, 0, 5, 5, 6]]
 test_function(test_case1)
