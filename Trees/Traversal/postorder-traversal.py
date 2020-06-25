@@ -26,6 +26,21 @@ class Solution:
 
         return result
 
+    # Recursion
+    def postorderTraversal2(self, root):
+        array = []
+        self.postorderTraversalHelper(root, array)
+        return array
+
+    def postorderTraversalHelper(self, root, array):
+        if root.left is not None:
+            self.postorderTraversalHelper(root.left, array)
+
+        if root.right is not None:
+            self.postorderTraversalHelper(root.right, array)
+
+        array.append(root.val)
+
 
 root = TreeNode(7)
 root.left = TreeNode(3)
