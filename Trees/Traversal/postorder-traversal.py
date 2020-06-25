@@ -12,19 +12,16 @@ class Solution:
     def postorderTraversal(self, root):
         result = []
 
-        stack = []
-        stack.append(root)
+        stack = [root]
         while len(stack) != 0:
-            current_node = stack[len(stack) - 1]  # peek
-            if current_node.left and current_node.left.val not in result:
+            current_node = stack.pop()
+            result.append(current_node.val)
+            if current_node.left:
                 stack.append(current_node.left)
-            elif current_node.right and current_node.right.val not in result:
+            if current_node.right:
                 stack.append(current_node.right)
-            else:
-                result.append(current_node.val)
-                stack.pop()
 
-        return result
+        return result[::-1]
 
     # Recursion
     def postorderTraversal2(self, root):
