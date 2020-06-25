@@ -26,3 +26,17 @@ class Solution:
                 stack.pop()
 
         return result
+
+    def preorderTraversal(self, root):
+        array = []
+        self.preOrderTraversalHelper(root, array)
+        return array
+
+    def preOrderTraversalHelper(self, root, array):
+        array.append(root.val)
+
+        if root.left is not None:
+            self.preOrderTraversalHelper(root.left, array)
+
+        if root.right is not None:
+            self.preOrderTraversalHelper(root.right, array)
